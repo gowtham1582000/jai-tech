@@ -19,7 +19,10 @@
     <link rel="stylesheet" href="assets/css/dark-theme.css">
     <link rel="stylesheet" href="assets/css/responsive.css">
     <title>Jai Tech Solution</title>
-    <link rel="icon" type="image/png" href="assets/img/favicon.png">
+    <link rel="icon" type="image/png" href="assets/img/logo.png">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
     <script
 		src="https://code.jquery.com/jquery-3.3.1.js"
 		integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
@@ -31,6 +34,126 @@
 	      $("#footer").load("footer.html"); 
 	    });
     </script>
+    <style>
+	
+		/* Slider */
+		
+		.slick-slide {
+			margin: 0px 20px;
+		}
+		
+		.slick-slide img {
+			width: 100%;
+		}
+		
+		.slick-slider
+		{
+			position: relative;
+			display: block;
+			box-sizing: border-box;
+			-webkit-user-select: none;
+			-moz-user-select: none;
+			-ms-user-select: none;
+					user-select: none;
+			-webkit-touch-callout: none;
+			-khtml-user-select: none;
+			-ms-touch-action: pan-y;
+				touch-action: pan-y;
+			-webkit-tap-highlight-color: transparent;
+		}
+		
+		.slick-list
+		{
+			position: relative;
+			display: block;
+			overflow: hidden;
+			margin: 0;
+			padding: 0;
+		}
+		.slick-list:focus
+		{
+			outline: none;
+		}
+		.slick-list.dragging
+		{
+			cursor: pointer;
+			cursor: hand;
+		}
+		
+		.slick-slider .slick-track,
+		.slick-slider .slick-list
+		{
+			-webkit-transform: translate3d(0, 0, 0);
+			   -moz-transform: translate3d(0, 0, 0);
+				-ms-transform: translate3d(0, 0, 0);
+				 -o-transform: translate3d(0, 0, 0);
+					transform: translate3d(0, 0, 0);
+		}
+		
+		.slick-track
+		{
+			position: relative;
+			top: 0;
+			left: 0;
+			display: block;
+		}
+		.slick-track:before,
+		.slick-track:after
+		{
+			display: table;
+			content: '';
+		}
+		.slick-track:after
+		{
+			clear: both;
+		}
+		.slick-loading .slick-track
+		{
+			visibility: hidden;
+		}
+		
+		.slick-slide
+		{
+			display: none;
+			float: left;
+			height: 100%;
+			min-height: 1px;
+		}
+		[dir='rtl'] .slick-slide
+		{
+			float: right;
+		}
+		.slick-slide img
+		{
+			display: block;
+		}
+		.slick-slide.slick-loading img
+		{
+			display: none;
+		}
+		.slick-slide.dragging img
+		{
+			pointer-events: none;
+		}
+		.slick-initialized .slick-slide
+		{
+			display: block;
+		}
+		.slick-loading .slick-slide
+		{
+			visibility: hidden;
+		}
+		.slick-vertical .slick-slide
+		{
+			display: block;
+			height: auto;
+			border: 1px solid transparent;
+		}
+		.slick-arrow.slick-hidden {
+			display: none;
+		}
+		
+		</style>
 </head>
 
 <body>
@@ -53,7 +176,7 @@
        
        
 
-
+       
         <section class="hero-wrap style1 hero-bg-1">
             <div class="overlay op-9 bg-russian"></div>
             <div class="container pos-rel">
@@ -120,9 +243,42 @@
                     </div>
                 </div>
             </div>
-        </section>
-
-
+        </section><br><br><br>
+        <div class="section-title style1 text-center mb-50">
+            <h2>Our Partners</h2>
+        </div>
+        <section class="customer-logos slider" style="background-color: white;">
+            <div class="slide"><img src="assets/img/logo1.jpg"></div>
+            <div class="slide"><img src="assets/img/logo2.jpg"></div>
+            <div class="slide"><img src="assets/img/logo3.png"></div>
+            <div class="slide"><img src="assets/img/logo4.png"></div>
+           
+         </section>
+          <script>
+          $(document).ready(function(){
+                $('.customer-logos').slick({
+                    slidesToShow: 4,
+                    slidesToScroll: 1,
+                    autoplay: true,
+                    autoplaySpeed: 1500,
+                    arrows: false,
+                    dots: false,
+                    pauseOnHover: false,
+                    responsive: [{
+                        breakpoint: 768,
+                        settings: {
+                            slidesToShow: 4
+                        }
+                    }, {
+                        breakpoint: 520,
+                        settings: {
+                            slidesToShow: 3
+                        }
+                    }]
+                });
+            });
+          </script>
+        
         <section class="category-wrap pt-100 pb-75">
             <div class="container">
                 <div class="row justify-content-center">
@@ -159,7 +315,7 @@
                 </div>
             </div>
         </section>
-
+        
 
         <section class="about-wrap style1 ptb-100 bg-f about-bg-1">
             <img src="assets/img/about/cctv-1.png" alt="Image" class="about-shape-1 lg-none">
@@ -599,6 +755,8 @@
     <script src="assets/js/fancybox.js"></script>
     <script src="assets/js/jquery.appear.js"></script>
     <script src="assets/js/odometer.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.js"></script>
+
     <script src="assets/js/main.js"></script>
 </body>
 

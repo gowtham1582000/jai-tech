@@ -973,7 +973,8 @@ select {
     font-size: 40px;
     line-height: 1.2;
     font-weight: 700;
-    margin: 0
+    margin: 0;
+    
 }
 
 .section-title p,
@@ -8243,7 +8244,7 @@ article .content-feature-list {
 
 @media only screen and (min-width:992px) {
     .footer-wrap .footer-top {
-        padding-top: 160px
+        padding-top: 60px
     }
 
     .footer-wrap .footer-top .footer-widget-wrap .footer-widget .footer-widget-title {

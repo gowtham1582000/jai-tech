@@ -260,8 +260,8 @@ select {
 }
 
 .ptb-100 {
-    padding-top: 100px;
-    padding-bottom: 100px
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 
 .mb-0 {
@@ -4651,7 +4651,8 @@ select {
 }
 
 .case-card.style3 .case-img img {
-    border-radius: 5px
+    border-radius: 5px;
+    
 }
 
 .case-card.style3 .case-img .case-info-wrap {

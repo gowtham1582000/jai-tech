@@ -4079,7 +4079,7 @@ select {
 }
 
 .service-card .service-info {
-    background-color: #f9f9f9;
+    background-color: white;
     padding: 25px;
     position: relative
 }

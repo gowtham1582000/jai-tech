@@ -260,8 +260,8 @@ select {
 }
 
 .ptb-100 {
-    padding-top: 100px;
-    padding-bottom: 100px
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 
 .mb-0 {
@@ -2571,7 +2571,7 @@ select {
 }
 
 .br-2 {
-    background-image: url(../img/breadcrumb/br-2.jpg)
+    background-image: url(../img/services/section/cctv-header-3.jpg)
 }
 
 .br-3 {
@@ -4651,7 +4651,8 @@ select {
 }
 
 .case-card.style3 .case-img img {
-    border-radius: 5px
+    border-radius: 5px;
+    
 }
 
 .case-card.style3 .case-img .case-info-wrap {
@@ -4804,7 +4805,7 @@ select {
 }
 
 .wh-img-1 {
-    background-image: url(../img/why-choose-us/wh-img-1.jpg)
+    background-image: url(../img/about/about-img-1.jpg)
 }
 
 .wh-img-2 {
@@ -6238,7 +6239,7 @@ select {
 }
 
 .contact-item-box {
-    background-color: #f9f9f9;
+    
     text-align: left;
     padding: 22px 25px;
     margin-bottom: 25px;

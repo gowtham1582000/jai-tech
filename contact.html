@@ -29,6 +29,14 @@
             $("#footer").load("footer.html");
         });
     </script>
+    <script type="text/javascript"
+	src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+</script>
+<script>
+ (function () {
+
+		emailjs.init("8TtUAnC6J3jN34Ew-");
+	})();</script>
 </head>
 
 <body>
@@ -163,7 +171,7 @@
                                         <div class="col-lg-6">
                                             <div class="form-group">
                                                 <input type="text" name="phone_number" placeholder="Phone Number *"
-                                                    id="phone_number" required=""
+                                                    id="number" required=""
                                                     data-error="Please enter your phone number">
                                                 <div class="help-block with-errors"></div>
                                             </div>
@@ -171,7 +179,7 @@
                                         <div class="col-lg-6">
                                             <div class="form-group">
                                                 <input type="text" name="msg_subject" placeholder="Subject *"
-                                                    id="msg_subject" required=""
+                                                    id="subject" required=""
                                                     data-error="Please enter your subject*">
                                                 <div class="help-block with-errors"></div>
                                             </div>
@@ -185,15 +193,50 @@
                                             </div>
                                         </div>
                                         <div class="col-lg-12">
-                                            <button type="submit" class="btn style1 d-block w-100">Send
+                                            <button type="submit" onclick="sendMail()" class="btn style1 d-block w-100">Send
                                                 Message</button>
-                                            <div id="msgSubmit" class="h3 text-center hidden"></div>
                                             <div class="clearfix"></div>
                                         </div>
                                     </div>
                                 </form>
                             </div>
                         </div>
+                        <script>
+                            function sendMail() {
+                              var params = {
+                                name: document.getElementById("name").value,
+                                email: document.getElementById("email").value,
+                                message: document.getElementById("message").value,
+                                number:document.getElementById("number").value,
+                                subject:document.getElementById("subject").value
+                              };
+                              var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+                                  if(params.email.match(mailformat) && params.email!="")
+                                      {
+                                              if(params.message!="" && params.name!="" && params.number!=""){
+                            
+                                                  const serviceID = "service_vh0wshi";
+                                                  const templateID = "template_svtdsay";
+                                              
+                                                  emailjs.send(serviceID, templateID, params)
+                                                  .then(res=>{
+                                                      document.getElementById("name").value = "";
+                                                      document.getElementById("email").value = "";
+                                                      document.getElementById("message").value = "";
+                                                      document.getElementById("number").value = "";
+                                                      document.getElementById("subject").value="";
+                                                      console.log(res);
+                                                      alert("Your message sent successfully!!")
+                            
+                                })
+                                .catch(err=>console.log(err));
+                            
+                            }else{
+                              alert("Fields Cannot be empty");
+                            }
+                          
+                          }else{alert("Check the mail or the Field cannot be empty");}}
+                            </script>
                         <div class="col-xl-4">
                             <div class="contact-widget bg-f style2">
                                 <div class="overlay op-8 bg-russian"></div>

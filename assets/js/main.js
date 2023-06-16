@@ -1,4 +1,4 @@
-(function ($) {
+ (function ($) {
     "use strict";
     $(window).on('load', function (event) {
         $('.js-preloader').delay(500).fadeOut(500);
